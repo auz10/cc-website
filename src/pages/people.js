@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import PersonPreview from "../components/person-preview";
 
-class ContraceptersIndex extends React.Component {
+class PeopleIndex extends React.Component {
   render() {
     const siteTitle = get(this, "props.data.site.siteMetadata.title");
     const people = get(this, "props.data.allContentfulPerson.edges");
@@ -35,7 +35,7 @@ class ContraceptersIndex extends React.Component {
   }
 }
 
-export default ContraceptersIndex;
+export default PeopleIndex;
 
 export const pageQuery = graphql`
   query peopleIndexQuery {
