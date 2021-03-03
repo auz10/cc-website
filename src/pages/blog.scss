@@ -1,0 +1,42 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61.8vh;
+  max-height: 400px;
+  background: #e1e1e1;
+  font-size: 2em;
+  overflow: hidden;
+}
+.title {
+  padding: 8px 12px;
+  color: #e8e8e8;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.1s ease;
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: attr(data-title);
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    color: #222222;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 24px;
+  }
+}

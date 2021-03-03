@@ -1,0 +1,30 @@
+.person-preview {
+  background-color: #fbfbfb;
+  border: 2px solid #222222;
+  box-shadow: 4px 4px 0px #222222;
+  padding: 8px 6px;
+}
+
+.person-img-wrapper {
+  border: 2px solid #222222;
+}
+
+.personTitle {
+  font-size: 1.5em;
+  margin: 4px 0px 0px 3px;
+  font-weight: 500;
+  position: relative;
+  color: #e8e8e8;
+
+  &::before {
+    content: attr(data-title);
+    position: absolute;
+    left: -3px;
+    top: -2px;
+    color: #222222;
+  }
+}
+
+.short-bio {
+  margin: 0px;
+}
