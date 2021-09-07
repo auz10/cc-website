@@ -9,7 +9,7 @@ import ArticlePreview from '../components/article-preview'
 class ContraceptersIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const posts = get(this, 'props.data.allContentfulArticle.edges')
     const color = "#c1e9f9";
     return (
       <Layout location={this.props.location} titleColor={color}>
@@ -37,7 +37,7 @@ export default ContraceptersIndex
 
 export const pageQuery = graphql`
   query ContraceptersIndexQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulArticle(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title

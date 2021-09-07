@@ -18,7 +18,7 @@ class PeopleIndex extends React.Component {
           <div className="wrapper">
             <h2 className="title" data-title="People">
               People
-            </h2>
+            </h2>     
             <ul className="people-list">
               {people.map(({ node }) => {
                 return (

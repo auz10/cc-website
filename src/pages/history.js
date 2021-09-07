@@ -6,19 +6,18 @@ import "./blog.scss";
 import Layout from "../components/layout";
 import ArticlePreview from "../components/article-preview";
 
-class ContracepteesIndex extends React.Component {
+class HistoryIndex extends React.Component {
   render() {
     const siteTitle = get(this, "props.data.site.siteMetadata.title");
-    const posts = get(this, "props.data.allContentfulBlogPost.edges");
-    console.log('posts', posts)
-    const color = "#f9c7b3";
+    const posts = get(this, "props.data.allContentfulArticle.edges");
+    const color = "#f6c500";
     return (
       <Layout location={this.props.location} titleColor={color}>
         <div style={{ background: color }}>
           <Helmet title={siteTitle} />
           <div className="wrapper">
-            <h2 className="title" data-title="Contraceptees">
-              Contraceptees
+            <h2 className="title" data-title="History">
+              History
             </h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
@@ -36,23 +35,27 @@ class ContracepteesIndex extends React.Component {
   }
 }
 
-export default ContracepteesIndex;
+export default HistoryIndex;
 
 export const pageQuery = graphql`
-  query ContracepteesIndexQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+  query HistoryIndexQuery {
+    allContentfulArticle(
+      sort: { fields: [publishDate], order: DESC }
+      filter: { category: { eq: "History" } }
+    ) {
       edges {
         node {
           title
+          category
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-                aspectRatio
-                src
-                srcSet
-                sizes
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
           description {

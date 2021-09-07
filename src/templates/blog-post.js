@@ -10,7 +10,7 @@ import './blog-post.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulArticle')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const color = '#e8e8e8'
     return (
@@ -49,7 +49,7 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulArticle(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {

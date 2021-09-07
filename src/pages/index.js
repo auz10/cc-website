@@ -8,7 +8,7 @@ import Entrance from '../components/entrance'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    // const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    // const posts = get(this, 'props.data.allContentfulArticle.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
     const color = "#9bccde";
     return (
@@ -26,7 +26,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulArticle(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title

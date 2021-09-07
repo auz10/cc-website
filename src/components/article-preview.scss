@@ -9,6 +9,30 @@
       filter: brightness(1.1);
     }
   }
+
+  &.dark {
+    .previewTitle {
+      color: #222222;
+      &::before {
+        content: attr(data-title);
+        color: #f9f9f9;
+      }
+    }
+    .preview-img-wrapper {
+      border: 2px solid #f9f9f9;
+    }
+    .date {
+      border: 1px solid #f9f9f9;
+      border-left: 0;
+      div {
+        color: #222222;
+        &::before {
+          content: attr(data-title);
+          color: #f9f9f9;
+        }
+      }
+    }
+  }
 }
 
 .previewTitle {
@@ -46,9 +70,23 @@
 .date {
   position: absolute;
   top: 12px;
-  padding: 2px 5px 0px;
+  padding: 0px 5px 0px;
   font-weight: 600;
   box-shadow: 3px 3px 0px #222222;
-  color: #222222;
-  white-space: nowrap;
+  border: 1px solid #222222;
+  border-left: 0;
+
+  div {
+    color: #f9f9f9;
+    white-space: nowrap;
+    margin: 2px 0 0 1px;
+    &::before {
+      content: attr(data-title);
+      position: absolute;
+      left: 3px;
+      top: 0px;
+      color: #222222;
+      margin: 2px 0 0 1px;
+    }
+  }
 }
