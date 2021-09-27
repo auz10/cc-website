@@ -5,39 +5,44 @@ import { CgArrowRight } from "@react-icons/all-files/cg/CgArrowRight";
 
 export default ({ data }) => (
   <div className="entrance">
-    <Link to="/contracepters/" className="entrance__left">
-      <div className="entrance__title" data-title="What is">
-        What is
+    <div className="entrance__left">
+      <div className="entrance__left__top">
+        <div className="entrance__title" data-title="Contraception Critical">
+          Contraception Critical
+        </div>
+        <div className="entrance__title" data-title="For You">
+          For You
+        </div>
       </div>
-      <div className="entrance__title" data-title="Contraception Critical?">
-        Contraception Critical?
+      <div className="entrance__left__bottom">
+      <Link to="/people/" className="entrance__option">
+        <div className="entrance__title" data-title="Voices">Voices</div>
+        <div class="entrance__icon">
+          <CgArrowRight class="entrance__icon--first" />
+          <CgArrowRight class="entrance__icon--last" />
+        </div>
+      </Link>
+      <Link to="/people/" className="entrance__option">
+        <div className="entrance__title" data-title="Have Your Say">Have Your Say</div>
+        <div class="entrance__icon">
+          <CgArrowRight class="entrance__icon--first" />
+          <CgArrowRight class="entrance__icon--last" />
+        </div></Link>
       </div>
-    </Link>
-    {/* <Link to="/contraceptees/" className="entrance__right">
-        <div className="entrance__title" data-title="Contraceptees">Contraceptees</div>
-    </Link> */}
+    </div>
     <div className="entrance__right">
+      <Link to="/people/" className="entrance__option">
+        <div className="entrance__title" data-title="Who">
+          Who
+        </div>
+        <div class="entrance__icon">
+          <CgArrowRight class="entrance__icon--first" />
+          <CgArrowRight class="entrance__icon--last" />
+        </div>
+      </Link>
       <Link to="/history/" className="entrance__option">
-        <div className="entrance__title" data-title="History">
-          History
-        </div>
-        <div class="entrance__icon">
-          <CgArrowRight class="entrance__icon--first" />
-          <CgArrowRight class="entrance__icon--last" />
-        </div>
-      </Link>
-      <Link to="/papers/" className="entrance__option">
-        <div className="entrance__title" data-title="Papers">
-          Papers
-        </div>
-        <div class="entrance__icon">
-          <CgArrowRight class="entrance__icon--first" />
-          <CgArrowRight class="entrance__icon--last" />
-        </div>
-      </Link>
-      <Link to="/futures/" className="entrance__option">
-        <div className="entrance__title" data-title="Futures">
-          Futures
+        <div className="entrance__title" data-title="What">
+          What
         </div>
         <div class="entrance__icon">
           <CgArrowRight class="entrance__icon--first" />
@@ -45,17 +50,26 @@ export default ({ data }) => (
         </div>
       </Link>
       <Link to="/vox-pops/" className="entrance__option">
-        <div className="entrance__title" data-title="Vox pops">
-          Vox pops
+        <div className="entrance__title" data-title="How">
+          How
         </div>
         <div class="entrance__icon">
           <CgArrowRight class="entrance__icon--first" />
           <CgArrowRight class="entrance__icon--last" />
         </div>
       </Link>
-      <Link to="/literacy/" className="entrance__option">
-        <div className="entrance__title" data-title="Literacy">
-          Literacy
+      <Link to="/futures/" className="entrance__option">
+        <div className="entrance__title" data-title="Why">
+          Why
+        </div>
+        <div class="entrance__icon">
+          <CgArrowRight class="entrance__icon--first" />
+          <CgArrowRight class="entrance__icon--last" />
+        </div>
+      </Link>
+      <Link to="/events/" className="entrance__option">
+        <div className="entrance__title" data-title="Where">
+          Where
         </div>
         <div class="entrance__icon">
           <CgArrowRight class="entrance__icon--first" />

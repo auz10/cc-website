@@ -10,7 +10,6 @@ class LiteracyIndex extends React.Component {
   render() {
     const siteTitle = get(this, "props.data.site.siteMetadata.title");
     const posts = get(this, "props.data.allContentfulArticle.edges");
-    console.log("posts", posts);
     const color = "#017291";
     return (
       <Layout location={this.props.location} titleColor={color}>
