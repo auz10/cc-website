@@ -15,7 +15,7 @@ export default ({ data }) => (
         </div>
       </div>
       <div className="entrance__left__bottom">
-      <Link to="/people/" className="entrance__option">
+      <Link to="/voices/" className="entrance__option">
         <div className="entrance__title" data-title="Voices">Voices</div>
         <div class="entrance__icon">
           <CgArrowRight class="entrance__icon--first" />

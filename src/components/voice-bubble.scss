@@ -1,0 +1,61 @@
+.voice {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fbfbfb;
+  border: 2px solid #222222;
+  box-shadow: 4px 4px 0px #222222;
+  margin-bottom: 75px;
+  border-radius: 50px;
+  padding: 30px 40px;
+
+  &__arrow {
+    position: relative;
+    border: 18.5px solid transparent;
+    border-top: 18.5px solid #fbfbfb;
+    border-bottom: 0;
+    height: 0;
+    width: 0;
+    border-top-width: 45px;
+    display: block;
+    position: absolute;
+    left: 8rem;
+    bottom: -30px;
+    transform-origin: center;
+    transform: rotate(90deg) skew(-25deg) translateY(16.6666666667px);
+  }
+  &::before {
+    border: 18.5px solid transparent;
+    border-top: 18.5px solid #222222;
+    border-bottom: 0;
+    height: 0;
+    width: 0;
+    border-top-width: 45px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 8.5rem;
+    bottom: -42px;
+    transform-origin: center;
+    transform: rotate(90deg) skew(-25deg) translateY(16.6666666667px);
+  }
+
+  &__name {
+    position: absolute;
+    bottom: -41px;
+    left: 10.5rem;
+    font-weight: bold;
+    color: #222222;
+    border-bottom: 4px solid #222222;
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 4px 0;
+  }
+}
